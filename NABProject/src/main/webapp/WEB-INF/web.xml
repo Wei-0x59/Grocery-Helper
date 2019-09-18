@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>Sample Maven Web App</display-name>
+	<welcome-file-list>
+		<welcome-file>home.jsp</welcome-file>
+	</welcome-file-list>
+
+	<listener>
+		<listener-class>com.fdmgroup.listeners.MyServletContextListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>com.fdmgroup.listeners.MySessionListener</listener-class>
+	</listener>
+
+
+	<servlet>
+		<servlet-name>AddItemServlets</servlet-name>
+		<servlet-class>com.fdmgroup.servlets.AddItemServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddItemServlets</servlet-name>
+		<url-pattern>/additem</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteItemServlets</servlet-name>
+		<servlet-class>com.fdmgroup.servlets.DeleteItemServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DeleteItemServlets</servlet-name>
+		<url-pattern>/deleteitem</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateItemServlet</servlet-name>
+		<servlet-class>com.fdmgroup.servlets.UpdateItemServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateItemServlet</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>SearchByCategoryServlet</servlet-name>
+		<servlet-class>com.fdmgroup.servlets.SearchByCategoryServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SearchByCategoryServlet</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+
+
+
+
+</web-app>
